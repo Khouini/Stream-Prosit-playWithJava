@@ -34,12 +34,15 @@ public class Level2 {
         System.out.println("Retourner true si il y a au min un employ�s dont le salaire > 1000: " + test);
         /* TO DO 7: Afficher le premier employ� dont le nom commence avec s avec deux mani�res diff�rentes */
  /*First way*/
-         System.out.println("Afficher le premier employ� dont le nom commence avec s aves deux methodes");
+        System.out.println("Afficher le premier employ� dont le nom commence avec s aves deux methodes");
 
-        employees.stream().filter(e->e.getName().toLowerCase().startsWith("s")).findFirst().ifPresent(e->System.out.println(e));/* TO DO 7 */
-        /*Second way*/
-        /* TO DO 8: Afficher le second employ� dont le nom commence avec s */
+        employees.stream().filter(e -> e.getName().toLowerCase().startsWith("s")).findFirst().ifPresent(e -> System.out.println(e));/* TO DO 7 */
+ /*Second way*/
+        System.out.println("second way");
+ employees.stream().filter(e -> e.getName().toLowerCase().startsWith("s")).limit(1).forEach(e-> System.out.println(e));
+ 
+ /* TO DO 8: Afficher le second employ� dont le nom commence avec s */
         System.out.println("le second employ� dont le nom commence avec s : ");
-        employees.stream().filter(e->e.getName().toLowerCase().startsWith("s")).skip(1).findFirst().ifPresent(e->System.out.println(e));/* TO DO 7 */
+        employees.stream().filter(e -> e.getName().toLowerCase().startsWith("s")).skip(1).findFirst().ifPresent(e -> System.out.println(e));/* TO DO 7 */
     }
 }
